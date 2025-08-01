@@ -1,0 +1,12 @@
+<suite name="My Maven TestNG suite">
+
+	<test name="Login Test">
+
+		<classes>
+			<class name="com.pkg.tests.LoginTest">
+			</class>
+		</classes>
+
+	</test>
+
+</suite>
