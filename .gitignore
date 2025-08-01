@@ -1,0 +1,39 @@
+# ====================
+# Maven build artifacts
+# ====================
+target/
+
+# ====================
+# Test reports (e.g., TestNG)
+# ====================
+test-output/
+
+# ====================
+# WebDriver executables
+# ====================
+Drivers/
+*.exe
+
+# ====================
+# Eclipse project files
+# ====================
+.classpath
+.project
+.settings/
+
+# ====================
+# OS/system files
+# ====================
+.DS_Store
+Thumbs.db
+
+# ====================
+# Logs (optional)
+# ====================
+logs/
+*.log
+
+# ====================
+# Others (if needed)
+# ====================
+.settings/
