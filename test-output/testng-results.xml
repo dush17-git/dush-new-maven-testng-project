@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-03T11:52:39 CDT" name="Default suite" finished-at="2025-08-03T11:52:50 CDT" duration-ms="11072">
+  <suite started-at="2025-08-03T12:47:26 CDT" name="Default suite" finished-at="2025-08-03T12:47:38 CDT" duration-ms="11814">
     <groups>
     </groups>
-    <test started-at="2025-08-03T11:52:39 CDT" name="Default test" finished-at="2025-08-03T11:52:50 CDT" duration-ms="11072">
+    <test started-at="2025-08-03T12:47:26 CDT" name="Default test" finished-at="2025-08-03T12:47:38 CDT" duration-ms="11814">
       <class name="com.pkg.tests.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.pkg.tests.LoginTest@4550bb58]" started-at="2025-08-03T11:52:39 CDT" name="setUp" finished-at="2025-08-03T11:52:42 CDT" duration-ms="2877" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.pkg.tests.LoginTest@4550bb58]" started-at="2025-08-03T12:47:26 CDT" name="setUp" finished-at="2025-08-03T12:47:30 CDT" duration-ms="3256" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validLogin()[pri:0, instance:com.pkg.tests.LoginTest@4550bb58]" started-at="2025-08-03T11:52:42 CDT" name="validLogin" finished-at="2025-08-03T11:52:46 CDT" duration-ms="4667" status="PASS">
+        <test-method signature="validLogin()[pri:0, instance:com.pkg.tests.LoginTest@4550bb58]" started-at="2025-08-03T12:47:30 CDT" name="validLogin" finished-at="2025-08-03T12:47:35 CDT" duration-ms="5008" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLogin -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:com.pkg.tests.LoginTest@4550bb58]" started-at="2025-08-03T11:52:46 CDT" name="closeDriver" finished-at="2025-08-03T11:52:50 CDT" duration-ms="3490" status="PASS">
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:com.pkg.tests.LoginTest@4550bb58]" started-at="2025-08-03T12:47:35 CDT" name="closeDriver" finished-at="2025-08-03T12:47:38 CDT" duration-ms="3473" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->

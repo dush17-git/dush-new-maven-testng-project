@@ -26,10 +26,10 @@ public class BaseTest {
 		options.addArguments("--user-data-dir="+ tempPath.toAbsolutePath().toString());
 		
 		//Comment these commandline arguments when run locally.
-		options.addArguments("--headless=new"); //To enable a new headless mode. 
-	    options.addArguments("--disable-gpu");
-	    options.addArguments("--no-sandbox");
-	    options.addArguments("--disable-dev-shm-usage");
+		//options.addArguments("--headless=new"); //To enable a new headless mode. 
+	    //options.addArguments("--disable-gpu");
+	    //options.addArguments("--no-sandbox");
+	    //options.addArguments("--disable-dev-shm-usage");
 		
 				
 		wdriver = new ChromeDriver(options);
