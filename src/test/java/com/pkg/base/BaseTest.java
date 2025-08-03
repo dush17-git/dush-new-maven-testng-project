@@ -32,7 +32,7 @@ public class BaseTest {
 	    options.addArguments("--disable-dev-shm-usage");
 		
 				
-		wdriver = new ChromeDriver();
+		wdriver = new ChromeDriver(options);
 		wdriver.manage().window().maximize();
 		wdriver.get("https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F");
 	}
