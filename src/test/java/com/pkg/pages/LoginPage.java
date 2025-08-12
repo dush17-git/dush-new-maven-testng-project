@@ -32,7 +32,7 @@ public class LoginPage {
     public void pushLoginButton() {
     	
     	try {
-			Thread.sleep(3000);
+			Thread.sleep(3000);              //Thread is a Java class, used here to invoke sleep().
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} 

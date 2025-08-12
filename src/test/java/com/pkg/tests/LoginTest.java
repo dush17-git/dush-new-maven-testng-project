@@ -19,7 +19,8 @@ public class LoginTest extends BaseTest{
 		
 		System.out.println("title of the page is: "+wdriver.getTitle());
 		
-		Assert.assertEquals(wdriver.getTitle(),"Dashboard / nopCommerce administration");
+        //Assert is a class in TestNG.
+		Assert.assertEquals(wdriver.getTitle(),"Dashboard / nopCommerce administration"); 
 		
 		
 	}
