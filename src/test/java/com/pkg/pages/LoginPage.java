@@ -1,7 +1,13 @@
 package com.pkg.pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 public class LoginPage {
 	
@@ -18,8 +24,10 @@ public class LoginPage {
     
     //Action
     public void enterUsername(String username) {
-    	driver.findElement(usernameTextBox).clear();
-    	driver.findElement(usernameTextBox).sendKeys(username);
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(usernameTextBox));
+        driver.findElement(usernameTextBox).clear();
+        driver.findElement(usernameTextBox).sendKeys(username);
     }
     
     //Action
