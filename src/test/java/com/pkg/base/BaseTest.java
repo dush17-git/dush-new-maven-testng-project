@@ -17,10 +17,10 @@ public class BaseTest {
 	
 	@BeforeMethod
 	public void setUp() throws IOException{
-		//ChromeOptions options = new ChromeOptions();
-	   // tempDir = Files.createTempDirectory("chrome-user-data").toString();
-	   // options.addArguments("--user-data-dir=" + tempDir);
-		wdriver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+	    //tempDir = Files.createTempDirectory("chrome-user-data").toString();
+	    options.addArguments("--user-data-dir=tmp/chrome" + System.currentTimeMillis());
+		wdriver = new ChromeDriver(options);
 		wdriver.manage().window().maximize();
 		wdriver.get("https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F");
 	}
