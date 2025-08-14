@@ -3,6 +3,7 @@ package com.pkg.pages;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -24,6 +25,8 @@ public class LoginPage {
     
     //Action
     public void enterUsername(String username) {
+    	System.out.println("Page title: " + driver.getTitle());
+    	System.out.println("Page source: " + driver.getPageSource());
     	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(usernameTextBox));
         driver.findElement(usernameTextBox).clear();
