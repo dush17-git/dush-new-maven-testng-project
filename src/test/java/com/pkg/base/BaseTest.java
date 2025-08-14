@@ -3,12 +3,16 @@ package com.pkg.base;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Comparator;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
+import java.nio.file.*;
+import java.util.stream.Stream;
 
 public class BaseTest {
 	
@@ -20,8 +24,9 @@ public class BaseTest {
 		ChromeOptions options = new ChromeOptions();
 	    tempDir = Files.createTempDirectory("chrome-user-data").toAbsolutePath().toString();
 	    options.addArguments("--user-data-dir=" + tempDir);
+	    options.addArguments("--headless=new"); //Remove when debugging in local.
 		wdriver = new ChromeDriver(options);
-		wdriver.manage().window().maximize();
+		//wdriver.manage().window().maximize();  //Remove when headless.
 		wdriver.get("https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F");
 	}
 	
@@ -35,7 +40,22 @@ public class BaseTest {
 				e.printStackTrace();
 			} 
 			
-			wdriver.quit();;
+			wdriver.quit();
+			
+			if (tempDir != null) {
+			    try (Stream<Path> walk = Files.walk(Paths.get(tempDir))) {
+			        walk.sorted(Comparator.reverseOrder())
+			            .forEach(path -> {
+			                try {
+			                    Files.deleteIfExists(path);
+			                } catch (IOException e) {
+			                    e.printStackTrace();
+			                }
+			            });
+			    } catch (IOException e) {
+			        e.printStackTrace();
+			    }
+			}
 		}
 		
 		// Delete tempDir if you stored its path
