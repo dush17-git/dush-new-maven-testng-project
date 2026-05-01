@@ -10,17 +10,17 @@ public class LoginTest extends BaseTest{
 
 	@Test
 	public void validLogin() {
-		LoginPage loginpage = new LoginPage(wdriver); //wdriver is WebDriver object from BaseTest.
+		LoginPage loginpage = new LoginPage(driver); //driver is WebDriver object from BaseTest.
 		
 		//Calling the LoginPage methods with values.
-		loginpage.enterUsername("admin@yourstore.com");
-		loginpage.enterPassword("admin");
-		loginpage.pushLoginButton();
+		loginpage.enterUsername("standard_user");
+		loginpage.enterPassword("secret_sauce");
+		loginpage.clickLoginButton();
 		
-		System.out.println("title of the page is: "+wdriver.getTitle());
+		System.out.println("title of the page is: "+driver.getTitle());
 		
         //Assert is a class in TestNG.
-		Assert.assertEquals(wdriver.getTitle(),"Dashboard / nopCommerce administration"); 
+		Assert.assertEquals(driver.getTitle(),"Swag Labs"); 
 		
 		
 	}
