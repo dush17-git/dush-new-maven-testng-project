@@ -16,6 +16,8 @@ public class LoginPage {
 	private By usernameTextBox = By.id("user-name");
     private By passwordTextBox = By.id("password");
     private By loginButton = By.id("login-button");
+    private By loginError = By.cssSelector("[data-test='error']");
+    
     
     public LoginPage(WebDriver driver){
     	this.driver =driver;
@@ -41,5 +43,12 @@ public class LoginPage {
         wait.until(ExpectedConditions.elementToBeClickable(loginButton));
  
     	driver.findElement(loginButton).click();
+    }
+    
+    public String getErrorMessage() {
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    	wait.until(ExpectedConditions.visibilityOfElementLocated(loginError));
+    	
+    	return driver.findElement(loginError).getText();
     }
 }

@@ -24,5 +24,79 @@ public class LoginTest extends BaseTest{
 		
 		
 	}
+	
+	@Test
+	public void invalidLoginUserNm() {
+		
+		LoginPage loginpage = new LoginPage(driver); //driver is WebDriver object from BaseTest.
+		
+		//Calling the LoginPage methods with values.
+		loginpage.enterUsername("standard_usrr");
+		loginpage.enterPassword("secret_sauce");
+		loginpage.clickLoginButton();
+		
+		
+		String loginerror = loginpage.getErrorMessage();
+		
+		System.out.println("Error message for invalid user name is: "+loginerror);
+		Assert.assertEquals(loginerror, "Epic sadface: Username and password do not match any user in this service");
+		
+	}
+	
+	@Test
+	public void invalidLoginPwd() {
+		
+		LoginPage loginpage = new LoginPage(driver); //driver is WebDriver object from BaseTest.
+		
+		//Calling the LoginPage methods with values.
+		loginpage.enterUsername("standard_user");
+		loginpage.enterPassword("secret_sooce");
+		loginpage.clickLoginButton();
+		
+		
+		String loginerror = loginpage.getErrorMessage();
+		
+		System.out.println("Error message for invalid pwd is: "+loginerror);
+		Assert.assertEquals(loginerror, "Epic sadface: Username and password do not match any user in this service");
+		
+	}
+	
+	@Test
+	public void invalidLoginBothUsnPwd() {
+		
+		LoginPage loginpage = new LoginPage(driver); //driver is WebDriver object from BaseTest.
+		
+		//Calling the LoginPage methods with values.
+		loginpage.enterUsername("standard_usrr");
+		loginpage.enterPassword("secret_sooce");
+		loginpage.clickLoginButton();
+		
+		
+		String loginerror = loginpage.getErrorMessage();
+		
+		System.out.println("Error message for invalid pwd is: "+loginerror);
+		Assert.assertEquals(loginerror, "Epic sadface: Username and password do not match any user in this service");
+		
+	}
+	
+	@Test
+	public void emptyFieldLogin() {
+		
+		LoginPage loginpage = new LoginPage(driver); //driver is WebDriver object from BaseTest.
+		
+		//Calling the LoginPage methods with values.
+		loginpage.enterUsername("");
+		loginpage.enterPassword("");
+		loginpage.clickLoginButton();
+		
+		
+		String loginerror = loginpage.getErrorMessage();
+		
+		System.out.println("Error message for empty fields is: "+loginerror);
+		Assert.assertEquals(loginerror, "Epic sadface: Username is required");
+		
+	}
+	
+
 
 }
