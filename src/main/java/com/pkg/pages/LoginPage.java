@@ -38,11 +38,13 @@ public class LoginPage {
     }
     
     //Action
-    public void clickLoginButton() {
+    public ProductsPage clickLoginButton() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(loginButton));
  
     	driver.findElement(loginButton).click();
+    	
+    	return new ProductsPage(driver);	//Returning a ProductsPage Object, with the driver.
     }
     
     public String getErrorMessage() {

@@ -55,7 +55,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-My_Maven_TestNG_suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">6 methods,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,32 @@
                     <div class="method-list-content passed suite-My_Maven_TestNG_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-My_Maven_TestNG_suite" title="com.pkg.tests.LoginTest" class="method navigator-link" hash-for-method="emptyFieldLogin">emptyFieldLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-My_Maven_TestNG_suite" title="com.pkg.tests.LoginTest" class="method navigator-link" hash-for-method="invalidLoginBothUsnPwd">invalidLoginBothUsnPwd</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-My_Maven_TestNG_suite" title="com.pkg.tests.LoginTest" class="method navigator-link" hash-for-method="invalidLoginPwd">invalidLoginPwd</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-My_Maven_TestNG_suite" title="com.pkg.tests.LoginTest" class="method navigator-link" hash-for-method="invalidLoginUserNm">invalidLoginUserNm</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-My_Maven_TestNG_suite" title="com.pkg.tests.LoginTest" class="method navigator-link" hash-for-method="validLogin">validLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-My_Maven_TestNG_suite" title="com.pkg.tests.ProductsTest" class="method navigator-link" hash-for-method="validTitle">validTitle</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-My_Maven_TestNG_suite -->
@@ -121,9 +146,52 @@
           <div class="suite-My_Maven_TestNG_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">com.pkg.tests.ProductsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validTitle">
+                  </a> <!-- validTitle -->
+                  <span class="method-name">validTitle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-My_Maven_TestNG_suite-class-passed -->
+          <div class="suite-My_Maven_TestNG_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">com.pkg.tests.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="emptyFieldLogin">
+                  </a> <!-- emptyFieldLogin -->
+                  <span class="method-name">emptyFieldLogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="invalidLoginBothUsnPwd">
+                  </a> <!-- invalidLoginBothUsnPwd -->
+                  <span class="method-name">invalidLoginBothUsnPwd</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="invalidLoginPwd">
+                  </a> <!-- invalidLoginPwd -->
+                  <span class="method-name">invalidLoginPwd</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="invalidLoginUserNm">
+                  </a> <!-- invalidLoginUserNm -->
+                  <span class="method-name">invalidLoginUserNm</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="validLogin">
@@ -148,6 +216,11 @@
       &lt;class name=&quot;com.pkg.tests.LoginTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Login Test --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Products Test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.pkg.tests.ProductsTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Products Test --&gt;
 &lt;/suite&gt; &lt;!-- My Maven TestNG suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -160,6 +233,9 @@
             <ul>
               <li>
                 <span class="test-name">Login Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Products Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -185,16 +261,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validLogin')
+data.setCell(0, 1, 'emptyFieldLogin')
 data.setCell(0, 2, 'com.pkg.tests.LoginTest')
-data.setCell(0, 3, 470);
+data.setCell(0, 3, 388);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'validLogin')
+data.setCell(1, 2, 'com.pkg.tests.LoginTest')
+data.setCell(1, 3, 369);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'invalidLoginBothUsnPwd')
+data.setCell(2, 2, 'com.pkg.tests.LoginTest')
+data.setCell(2, 3, 356);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'validTitle')
+data.setCell(3, 2, 'com.pkg.tests.ProductsTest')
+data.setCell(3, 3, 353);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'invalidLoginPwd')
+data.setCell(4, 2, 'com.pkg.tests.LoginTest')
+data.setCell(4, 3, 349);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'invalidLoginUserNm')
+data.setCell(5, 2, 'com.pkg.tests.LoginTest')
+data.setCell(5, 3, 332);
 window.suiteTableData['My_Maven_TestNG_suite']= { tableData: data, tableDiv: 'times-div-My_Maven_TestNG_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 470 ms</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-My_Maven_TestNG_suite">
               </div> <!-- times-div-My_Maven_TestNG_suite -->
             </div> <!-- times-div -->
@@ -226,12 +322,75 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">validLogin</span>
-                <span class="method-start">6813 ms</span>
+                <span class="method-name">emptyFieldLogin</span>
+                <span class="method-start">3422 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">7285 ms</span>
+                <span class="method-start">3814 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">4019 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">invalidLoginBothUsnPwd</span>
+                <span class="method-start">6006 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">6364 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">6523 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">invalidLoginPwd</span>
+                <span class="method-start">8494 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">8845 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">8987 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">invalidLoginUserNm</span>
+                <span class="method-start">11325 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">11658 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">11813 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validLogin</span>
+                <span class="method-start">13862 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">14233 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.pkg.tests.ProductsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">14482 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validTitle</span>
+                <span class="method-start">16502 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">16857 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

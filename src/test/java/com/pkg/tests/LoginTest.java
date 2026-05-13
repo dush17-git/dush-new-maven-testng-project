@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import com.pkg.base.BaseTest;
 import com.pkg.pages.LoginPage;
+import com.pkg.pages.ProductsPage;
 
 public class LoginTest extends BaseTest{
 
@@ -82,7 +83,7 @@ public class LoginTest extends BaseTest{
 	@Test
 	public void emptyFieldLogin() {
 		
-		LoginPage loginpage = new LoginPage(driver); //driver is WebDriver object from BaseTest.
+		LoginPage loginpage = new LoginPage(driver); //WebDriver object from BaseTest passing to Page class by calling it's constructor.
 		
 		//Calling the LoginPage methods with values.
 		loginpage.enterUsername("");
@@ -96,7 +97,5 @@ public class LoginTest extends BaseTest{
 		Assert.assertEquals(loginerror, "Epic sadface: Username is required");
 		
 	}
-	
-
 
 }
