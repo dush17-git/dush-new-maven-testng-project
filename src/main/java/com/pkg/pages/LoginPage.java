@@ -1,7 +1,6 @@
 package com.pkg.pages;
 
 import java.time.Duration;
-import com.pkg.pages.ProductsPage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
